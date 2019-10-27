@@ -1,6 +1,6 @@
 {% set name = "serializable" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "2b93a876aa0b9945235aec9bdd554707d44b39e878695a9b0d9af8acc2e02f87" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "ec604e5df0c1236c06d190043a407495c4412dd6b6fd3b45a8514518173ed961" %}
 
 package:
   name: {{ name|lower }}
