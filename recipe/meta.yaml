@@ -16,13 +16,13 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
     - setuptools
     - pypandoc
   run:
-    - python
+    - python >=3.6
     - typechecks >=0.0.2
     - six >=1.9.0
     - simplejson
