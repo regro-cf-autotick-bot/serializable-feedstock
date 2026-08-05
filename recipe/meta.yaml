@@ -1,13 +1,13 @@
 {% set name = "serializable" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "ec604e5df0c1236c06d190043a407495c4412dd6b6fd3b45a8514518173ed961" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "65e05de319ab50aa4612ff0616384bbf8f53b38444b4bf9d8780db8cff6c1eac" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -17,17 +17,19 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools
     - pypandoc
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - typechecks >=0.0.2
     - six >=1.9.0
     - simplejson
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - serializable
 
@@ -41,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - npavlovikj
+    - ccwang002
