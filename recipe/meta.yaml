@@ -1,13 +1,13 @@
 {% set name = "serializable" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "65e05de319ab50aa4612ff0616384bbf8f53b38444b4bf9d8780db8cff6c1eac" %}
+{% set version = "1.3.0" %}
+{% set sha256 = "6e99938ce9cf2015fb287d9c2eecbeb28c9b697134934912574db8774c9d02b7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
